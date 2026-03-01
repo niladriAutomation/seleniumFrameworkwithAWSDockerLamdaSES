@@ -6,7 +6,7 @@ phases:
       java: corretto17
     commands:
       - echo Installing Chrome
-      - yum install -y google-chrome
+      - apt-get install -y chromium-browser
       - echo Building project
       - mvn clean install -DskipTests
 
