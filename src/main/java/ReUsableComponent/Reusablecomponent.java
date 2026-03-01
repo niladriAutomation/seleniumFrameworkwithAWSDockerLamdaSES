@@ -18,12 +18,13 @@ public class Reusablecomponent {
     }
     @FindBy(css = "[class='nav-link btn btn-primary']") WebElement checkoutbutton;
     public void waitForElement (By findBy){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
         wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 
     }
     public void clickCartButton(){
         checkoutbutton.click();
+
 
 
     }
