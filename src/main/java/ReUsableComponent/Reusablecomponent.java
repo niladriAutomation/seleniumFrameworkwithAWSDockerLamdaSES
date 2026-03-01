@@ -21,11 +21,18 @@ public class Reusablecomponent {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
         wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 
+
     }
-    public void clickCartButton(){
+//    public void clickCartButton(){
+//        checkoutbutton.click();
+//    }
+    public void waitForElementToBeClickable(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void clickCartButton() {
+        waitForElementToBeClickable(checkoutbutton);
         checkoutbutton.click();
-
-
-
     }
 }
