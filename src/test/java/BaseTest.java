@@ -4,6 +4,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
@@ -45,7 +46,13 @@ public class BaseTest {
         } else {
 
             if (browsername.equalsIgnoreCase("chrome")) {
-                driver = new ChromeDriver();
+
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless=new");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+
+                driver = new ChromeDriver(options);
             }
             // can add firefox here later
         }
