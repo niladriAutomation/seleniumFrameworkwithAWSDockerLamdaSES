@@ -10,6 +10,7 @@ phases:
       java: corretto17
     commands:
       - echo Installing Maven dependencies
+      - service docker start
       - mvn clean install -DskipTests
 
   pre_build:
