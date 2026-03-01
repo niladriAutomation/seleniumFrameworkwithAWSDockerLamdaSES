@@ -27,7 +27,7 @@ public class Reusablecomponent {
 //        checkoutbutton.click();
 //    }
     public void waitForElementToBeClickable(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(35));
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
