@@ -47,7 +47,7 @@ public class ExtentReporterNG {
             extent.attachReporter(reporter);
 
             extent.setSystemInfo("Project", "Selenium FW Design");
-            extent.setSystemInfo("QA Engineer", "Niladri Das");
+            extent.setSystemInfo("QA Engineer", "Pooja kale");
             extent.setSystemInfo("Environment", "QA");
         }
 
